@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden X Support</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #0f0f1a, #1c1c2b);
+      color: #f5f5f5;
+    }
+    header {
+      background: linear-gradient(120deg, #1a1a2e, #16213e);
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 2px solid #f1c40f;
+    }
+    header img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #f1c40f;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      gap: 25px;
+    }
+    nav a {
+      color: #f1c40f;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 5px 10px;
+      transition: 0.2s ease-in-out;
+    }
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #f1c40f;
+    }
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      background: #222b3d;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      display: none;
+    }
+    .container.active {
+      display: block;
+    }
+    h2 {
+      color: #f39c12;
+    }
+    p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+    .status {
+      font-size: 1.1rem;
+      color: #2ecc71;
+    }
+    footer {
+      background: #0d0d0d;
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    footer img {
+      width: 24px;
+      margin: 0 10px;
+      vertical-align: middle;
+      opacity: 0.8;
+    }
+    footer img:hover {
+      opacity: 1;
+    }
+    .highlight {
+      color: #f1c40f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Golden X Logo">
+    <h1>Golden X Support</h1>
+    <p>Next-gen performance. Modern design. A new era of Discord automation.</p>
+  </header>
+
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('journey')">Our Journey</a>
+    <a onclick="showPage('commands')">Commands</a>
+    <a onclick="showPage('support')">Support</a>
+  </nav>
+
+  <div id="home" class="container active">
+    <h2>Welcome to <span class="highlight">Golden X</span></h2>
+    <p>This is your hub for everything related to Golden X — the advanced successor to Golden Core. Whether you're here for support, updates, or to explore features, you're in the right place.</p>
+    <p class="status">Bot Status: Online ✅</p>
+  </div>
+
+  <div id="journey" class="container">
+    <h2>The Journey from Golden Core to <span class="highlight">Golden X</span></h2>
+    <p>Golden Core laid the groundwork, offering a simple yet effective utility bot. But we saw the future: more powerful, more efficient, and more integrated.</p>
+    <p><span class="highlight">Golden X</span> was rebuilt from scratch with cutting-edge tech, intuitive systems, and a vision to serve thousands of communities with ease.</p>
+    <p>It’s not an upgrade. It’s a revolution.</p>
+  </div>
+
+  <div id="commands" class="container">
+    <h2>Commands</h2>
+    <p>Coming soon: detailed docs on how to use every command. Get ready for moderation, fun, utility, AI, and more — all in one bot.</p>
+  </div>
+
+  <div id="support" class="container">
+    <h2>Need Help?</h2>
+    <p>Contact <span class="highlight">@askgoldenx</span> on Discord.</p>
+    <p>Or join our support server to get help from the team, request features, or report bugs.</p>
+  </div>
+
+  <footer>
+    <div>
+      &copy; 2025 Golden X — All rights reserved.
+    </div>
+    <div style="margin-top: 15px;">
+      <a href="https://discord.gg" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png" alt="Discord" />
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube" />
+      </a>
+      <a href="https://twitch.tv" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/twitch.png" alt="Twitch" />
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.container').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
